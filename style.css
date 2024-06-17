@@ -1,0 +1,116 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.todoApp {
+    width: 40%;
+    height: 60vh;
+    background-color: white;
+    margin: 80px 450px;
+    overflow: auto;
+    position: relative;
+}
+
+.todoApp h2 {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+img {
+    height: 50px;
+    margin-left: 10px;
+}
+
+.row {
+    /* height: 40px; */
+    border: 2px solid slateblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 0px 20px;
+    margin-bottom: 10px;
+
+}
+
+input[type='text'] {
+    height: 40px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 20px;
+    font-weight: bolder;
+}
+
+input[type='submit'] {
+    height: 40px;
+    width: 140px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: orange;
+    outline: none;
+    border: none;
+    padding-right: 2px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border: 50%;
+    background-image: url('unchecked.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('checked.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#u-r-do{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+#undo , #redo{
+    height: 30px;
+    width: 50%;
+    margin: 3px;
+    background-color: greenyellow;
+    font-size: 1.2rem;
+}
+#undo:hover , #redo:hover{
+    border:3px solid black;
+    background-color: green;
+}
